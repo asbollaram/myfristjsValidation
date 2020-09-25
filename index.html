@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SB Javascript valiation sample</title>
+</head>
+<script type="text/javascript">
+function validname(){
+	var name=document.myform.name1.value;
+	//
+	
+	if(name=="null" || name==""){
+	alert("Please provide correct name");
+	return false;
+	}
+}
+</script>
+<style>
+.main-container{
+	margin:0px auto;
+	max-width:350px;
+}
+.form_class{
+	padding:10px;
+	border-radius: 10px;
+	border: 2px solid #FFC300;
+}
+</style>
+<body>
+<div class="main-container">
+<h2>My first Validation</h2>
+<form name="myform" method="post" action="welcome.html" onsubmit="return validname()" class="form_class">
+<div class="leftOne">Your Name:</div> <div class="rightOne"><input type="text" name="name1" pattern="[a-zA-Z]{3,}"/></div>
+<br/>
+<input type="submit" value="Click Me"/>
+</form>
+</div>
+
+</body>
+</html>
